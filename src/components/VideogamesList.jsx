@@ -1,21 +1,32 @@
 // src/components/VideogamesList.jsx
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const VideogamesList = ({ games }) => {
   return (
-    <div className="container pt-3  pb-5">
-      <h1 className="text-center mb-4">Videogames</h1>
-      <p className="text-center mb-4"><em>Scopri i nostri videogiochi più popolari!</em></p>
-      <div className="row g-4 ">
-        {games.map((game, index) => (
-          <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
-            <div className="card h-100 shadow-sm">
-              <div className="card-body">
+    <div className="container pt-5">
+      <h2 className="text-center mb-3">Videogames</h2>
+      <p className="text-center text-muted"><em>Scopri i nostri videogiochi più popolari!</em></p>
+      <div className="row">
+        {games.map((game, i) => (
+          <div className="col-md-4 mb-4" key={i}>
+            <div className="card h-100 p-3 d-flex flex-row justify-content-between align-items-start">
+              <div>
                 <h5 className="card-title">{game.title}</h5>
-                <p className="card-text"><strong>Modalità:</strong> {game.mode}</p>
-                <p className="card-text"><strong>Genere:</strong> {game.genre}</p>
-                <Link to={`/videogames/${game.id}`} key={game.id} className="btn btn-outline-success">Dettagli</Link>
+                <p className="card-text">
+                  <strong>Modalità:</strong> {game.mode}<br />
+                  <strong>Genere:</strong> {game.genre}
+                </p>
+                <Link to={`/videogames/${game.id}`} className="btn btn-outline-success btn-sm">
+                  Dettagli
+                </Link>
               </div>
+              <img
+                src={`http://127.0.0.1:8001/storage/${game.image}`}
+                alt={game.title}
+                style={{ width: '80px', height: 'auto', marginLeft: '10px' }}
+              />
             </div>
           </div>
         ))}
