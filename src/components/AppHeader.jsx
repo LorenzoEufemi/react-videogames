@@ -7,6 +7,7 @@ function AppHeader() {
         
         <div>
           <a href={`/`}>Home</a>
+          <a href={`/videogames`}>Videogames</a>
         </div>
       </div>
 

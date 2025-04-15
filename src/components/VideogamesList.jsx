@@ -11,7 +11,15 @@ const VideogamesList = ({ games }) => {
       <div className="row">
         {games.map((game, i) => (
           <div className="col-md-4 mb-4" key={i}>
-            <div className="card h-100 p-3 d-flex flex-row justify-content-between align-items-start">
+            <div className="card h-100 d-flex flex-row align-items-center p-3">
+              {/* Immagine a sinistra */}
+              <img
+                src={`http://127.0.0.1:8001/storage/${game.image}`}
+                alt={game.title}
+                style={{ width: '100px', height: 'auto', objectFit: 'cover', marginRight: '15px' }}
+              />
+
+              {/* Testo a destra */}
               <div>
                 <h5 className="card-title">{game.title}</h5>
                 <p className="card-text">
@@ -22,11 +30,6 @@ const VideogamesList = ({ games }) => {
                   Dettagli
                 </Link>
               </div>
-              <img
-                src={`http://127.0.0.1:8001/storage/${game.image}`}
-                alt={game.title}
-                style={{ width: '80px', height: 'auto', marginLeft: '10px' }}
-              />
             </div>
           </div>
         ))}
