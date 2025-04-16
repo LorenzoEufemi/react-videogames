@@ -11,7 +11,7 @@ const SingleVideogame = ({ game }) => {
     <section className="container p-5 text-center d-flex justify-content-center align-items-center min-vh-100">
       {/* Card del gioco */}
 
-      <div className="card" style={{ width: '18rem' }}>
+      <div className="card" style={{ width: '25rem' }}>
         {/* Immagine del gioco */}
         <img src={`http://127.0.0.1:8001/storage/${game.image}`} className="card-img-top" alt={game.title} />
 
