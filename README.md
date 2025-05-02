@@ -1,3 +1,24 @@
+# GameZone – Frontoffice
+
+Interfaccia utente per la consultazione e visualizzazione dei videogiochi, costruita con React.
+
+## Tecnologie
+- React.js
+- JavaScript (ES6)
+- CSS Modules / Styled Components
+- Bootstrap
+- Axios (per interazioni API)
+
+## Funzionalità
+- Visualizzazione dell'elenco videogiochi
+- Accesso ai **dettagli** di ogni gioco
+- Uso di **componenti riutilizzabili** per struttura pulita e modulare
+- Comunicazione con il backend tramite chiamate API REST
+
+## Descrizione
+Il frontoffice è progettato per offrire un’esperienza utente fluida e moderna. L’architettura a componenti favorisce il riutilizzo e la scalabilità del codice. Perfetto per presentare il catalogo giochi con un’interfaccia responsive e dinamica.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
